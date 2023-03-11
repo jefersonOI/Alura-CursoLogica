@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+<script>
+	function pulaLinha() {
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function sorteia(maxSorteio){
+		return Math.round(Math.random()*maxSorteio);
+	}
+
+	var maxSorteio = parseInt(prompt("Vamos sortear um numero de 0 até __ o numero maximo que você escolher abaixo."));
+
+	var numeroSorteado = sorteia(maxSorteio);
+	var tentativa = 1;
+	
+	while (tentativa <= 3){
+		var chute = parseInt(prompt("Agora digite um numero de 0 a "+ maxSorteio + ".  Agora tente adivinhar o numero sorteado. Boa sorte."));
+
+		if(chute == numeroSorteado){
+			mostra("Você ACERTOU!");
+		}
+		else {
+			mostra("Você ERROU!");
+			if (chute < numeroSorteado){
+				mostra("Você chutou um numero MENOR do que eu pensei que foi o: "+ numeroSorteado);
+			}
+			else {
+				mostra("Você chutou um numero MAIOR do que eu pensei que foi o: "+ numeroSorteado);
+			}
+		}
+		tentativa++;
+	}
+
+
+
+
+</script>

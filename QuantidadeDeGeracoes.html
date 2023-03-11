@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+
+<script>
+	function pulaLinha(){
+		document.write("<br>");
+	}
+
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function QuantidadeGeracoes(anoAtual,anoInicial){
+		var quantidadeGeracao = ((anoAtual - anoInicial) / 28)
+		mostra(anoAtual);
+		mostra(anoInicial);
+		mostra("Desde " + anoInicial + " até o ano em que estamos " + anoAtual + " temos " + (anoAtual - anoInicial) + " anos, e nestes anos tivemos " + quantidadeGeracao + " de gerações de familias, calculo feito com media em ter filhos com 28 anos de vida.");		
+	}	
+
+	QuantidadeGeracoes(2022,1500);
+
+</script>

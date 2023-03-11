@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+
+<script>
+	function pulaLinha(){
+		document.write("<br>");
+	}
+
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function diferencaIdade(minhaIdade,irmaoIdade){
+		var diferenca = minhaIdade - irmaoIdade;
+		mostra("Diferença de idade é de " + diferenca + " anos de vida");
+		if (diferenca == 0) {
+			
+			mostra("Nos temos a mesma idade!")
+		} 
+		else if(diferenca < 0) {
+			mostra("Meu irmão(ã) é mais velho que eu!")
+		}
+		else
+		{
+			mostra("Eu sou o mais velho!")
+		}
+	}
+	
+	diferencaIdade(28,28);
+
+
+
+</script>
